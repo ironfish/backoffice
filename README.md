@@ -12,3 +12,4 @@ The BackOffice project is meant to be an exploratory to prove out the following 
 * [Casbah](http://api.mongodb.org/scala/casbah/2.0/)
 * [Salat](https://github.com/novus/salat)
 * [Scalatra](http://www.scalatra.org)
+* [Spray](http://spray.github.com/latest/introduction/)

@@ -30,7 +30,7 @@ object BackOfficeBuild extends Build {
     //   }
     // },
     crossPaths := false,
-    resolvers ++= Seq(ossSonatype, scalaToolsRepoReleases, scalaToolsRepoSnapshots, typeSafeRepo)
+    resolvers ++= Seq(ossSonatype, scalaToolsRepoReleases, scalaToolsRepoSnapshots, sprayRepo, typeSafeRepo)
   )
 
   lazy val backOffice = Project(
@@ -64,7 +64,7 @@ object BackOfficeBuild extends Build {
     base = file("backoffice-ar"),
     settings = buildSettings ++ Seq(
       description := "Back Office Accounts Receivable",
-      libraryDependencies ++= Seq(akka, casbah, mockito, scalatest, testng)
+      libraryDependencies ++= Seq(akka, casbah, mockito, salat, sprayCan, sprayClient, sprayServer, scalatest, testng)
     )
   )
 }

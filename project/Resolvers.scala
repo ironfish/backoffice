@@ -13,6 +13,7 @@ import sbt.Keys._
 object Resolvers {
   //  alias                   = "name"                  at "location"
   val ossSonatype             = "OSS Sonatype"          at "https://oss.sonatype.org/content/repositories/snapshots"
+  val sprayRepo               = "Spray Repo"            at "http://repo.spray.cc/"
   val scalaToolsRepoReleases  = "Scala Tools Releases"  at "http://scala-tools.org/repo-releases"
   val scalaToolsRepoSnapshots = "Scala Tools Snapshots" at "http://scala-tools.org/repo-snapshots"
   val typeSafeRepo            = "Typesafe Repo"         at "http://repo.typesafe.com/typesafe/releases/"

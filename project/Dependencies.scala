@@ -26,5 +26,8 @@ object Dependencies {
   val salat          = "com.novus"          %% "salat"           % "1.9.0"
   val scalatest      = "org.scalatest"      %% "scalatest"       % "1.8"    % "test"
   val slf4j          = "org.slf4j"           % "slf4j-api"       % "1.6.4"
+  val sprayCan       = "cc.spray"            % "spray-can"       % "1.0-M2"
+  val sprayClient    = "cc.spray"            % "spray-client"    % "1.0-M2"
+  val sprayServer    = "cc.spray"            % "spray-server"    % "1.0-M2"
   val testng         = "org.testng"          % "testng"          % "6.5.2"    % "test"
 }
