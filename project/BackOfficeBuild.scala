@@ -30,7 +30,7 @@ object BackOfficeBuild extends Build {
     //   }
     // },
     crossPaths := false,
-    resolvers ++= Seq(ossSonatype, scalaToolsRepoReleases, scalaToolsRepoSnapshots, sprayRepo, typeSafeRepo)
+    resolvers ++= Seq(ossSonatypeReleases, ossSonatypeSnapshots, scalaToolsRepoReleases, scalaToolsRepoSnapshots, sprayRepo, typeSafeRepo)
   )
 
   lazy val backOffice = Project(
@@ -38,7 +38,6 @@ object BackOfficeBuild extends Build {
     base = file("."),
     settings = buildSettings,
     aggregate = Seq(backOfficeCore, backOfficeHr, backOfficeAr)
-
   )
 
   lazy val backOfficeCore = Project(
@@ -46,7 +45,7 @@ object BackOfficeBuild extends Build {
     base = file("backoffice-core"),
     settings = buildSettings ++ Seq(
       description := "Back Office Core",
-      libraryDependencies ++= Seq(akka, casbah, logbackClassic, mockito, scalatest, slf4j, testng)
+      libraryDependencies ++= Seq(akka, casbah, logbackClassic, mockito, salat, scalatest, slf4j, testng)
     )
   )
 
@@ -64,7 +63,7 @@ object BackOfficeBuild extends Build {
     base = file("backoffice-ar"),
     settings = buildSettings ++ Seq(
       description := "Back Office Accounts Receivable",
-      libraryDependencies ++= Seq(akka, casbah, mockito, salat, sprayCan, sprayClient, sprayServer, scalatest, testng)
+      libraryDependencies ++= Seq(akka, casbah, mockito, salat, sprayCan, sprayClient, specs2, sprayServer, scalatest, testng)
     )
   )
 }
